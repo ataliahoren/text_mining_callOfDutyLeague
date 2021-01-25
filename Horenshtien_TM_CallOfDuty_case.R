@@ -123,8 +123,7 @@ cleanTweets <- data.frame(document = seq_along(Tweets$status_id), #simple id ord
 cleanTweets <- left_join(cleanTweets, wideSent, by = c('document'='document'))
 cleanTweets$maxEmotion[is.na(cleanTweets$maxEmotion)] <- 'noEmotion' #NA introduced from join on docs that had no emotion
 
-cleanTweets
-# Visualization:
+# Visualization: (4)
 
 ## Load the needed libraries
 library(wordcloud)
